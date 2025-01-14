@@ -1,6 +1,15 @@
+"use client"
+
 import Image from "next/image";
+import TextArea from "@/components/Inputs/TextArea"
+import React, { useState, ChangeEvent} from "react";
+
+
 
 export default function Home() {
+
+  const [sourceText, setSourceText] = useState<string>("")
+
   return (
     <div className="h-[50rem] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
     
@@ -12,6 +21,22 @@ export default function Home() {
    <p className="mt-3 text-neutral-400 text-base items-center text-center font-semibold">
    Translatation is just one click away.
    </p>
+
+   <div className="mt-7 sm:mt-12 mx-auto max-w-3xl relative">
+    <div className="rid gap-4 md:grid-cols-2 grid-cols-1">
+      <div className="relative z-10 flex flex-col space-x-3 p-3  border rounded-lg shadow-lg  bg-neutral-900 border-neutral-700 shadow-gray-900/20">
+      <TextArea
+      id="source-language"
+      value={sourceText}
+      onChange={(e: ChangeEvent<HTMLTextAreaElement>) => {
+        setSourceText(e.target.value);
+      }}
+      placeholder="Source Langugage"
+      />
+      </div>
+    
+    </div>
+   </div>
     </div>
 
 
