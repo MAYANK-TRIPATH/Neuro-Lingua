@@ -1,5 +1,5 @@
 "use client"
-
+import "regenerator-runtime/runtime";
 import Image from "next/image";
 import TextArea from "@/components/Inputs/TextArea"
 import React, { useState, ChangeEvent } from "react";
@@ -37,7 +37,9 @@ export default function Home() {
             </div>
                 <div className="flex flex-col justify-between w-full">
                 <span className="cursor-pointer flex space-x-2 flex-row">
-                <SpeechRecognitionComponent/>
+                <SpeechRecognitionComponent
+                setSourceText={setSourceText}
+                />
                 </span>
                 </div>
           </div>
