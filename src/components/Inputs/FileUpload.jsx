@@ -1,16 +1,18 @@
 import React from "react";
-import { IconPaperclip } from "@tabler/icons-react"
+import { IconPaperclip } from "@tabler/icons-react";
 
-const FileUpload = ({handleFileUpload}) => {
-    <label htmlFor="file-upload" className="cursor-pointer">
-        <IconPaperclip size={21}/>
-        <input
+const FileUpload = ({ handleFileUpload }) => {
+  return ( // Add return statement
+    <label htmlFor="file-upload" className="cursor-pointer flex items-center space-x-2">
+      <IconPaperclip size={21} />
+      <input
         id="file-upload"
         type="file"
-        onChange = {handleFileUpload}
+        onChange={handleFileUpload}
         className="hidden"
-        />
+      />
     </label>
-}
+  );
+};
 
 export default FileUpload;

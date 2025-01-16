@@ -27,7 +27,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <script src="./node_modules/preline/dist/preline.js"></script>
+        <script src="./node_modules/preline/dist/preline.js" async></script>
         {children}
       </body>
     </html>
