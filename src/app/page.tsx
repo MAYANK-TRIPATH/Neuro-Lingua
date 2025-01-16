@@ -24,6 +24,7 @@ const Home: React.FC = () => {
   const [copied, setCopied] = useState<boolean>(false);
   const [favorite, setFavorite] = useState<boolean>(false);
   const [languages] = useState<string[]>([
+    "Hindi",
     "English",
     "Spanish",
     "French",
@@ -62,14 +63,6 @@ const Home: React.FC = () => {
     navigator.clipboard.writeText(targetText);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
-  };
-
-  const handleLike = () => {
-    // Implement like logic
-  };
-
-  const handleDislike = () => {
-    // Implement dislike logic
   };
 
   const handleFavorite = () => {
