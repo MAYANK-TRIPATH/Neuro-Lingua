@@ -65,6 +65,13 @@ const Home: React.FC = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const handleLike = () => {
+    
+  };
+  const handleDislike = () => {
+    
+  };
+
   const handleFavorite = () => {
     setFavorite(!favorite);
     if (!favorite) {
