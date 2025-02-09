@@ -2,7 +2,7 @@ import React from "react";
 import { IconPaperclip } from "@tabler/icons-react";
 
 const FileUpload = ({ handleFileUpload }) => {
-  return ( // Add return statement
+  return ( 
     <label htmlFor="file-upload" className="cursor-pointer flex items-center space-x-2">
       <IconPaperclip size={21} />
       <input
